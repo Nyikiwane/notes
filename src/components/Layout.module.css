@@ -1,0 +1,35 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-green-50);
+  border: 1px solid var(--main-green-50);
+  border-radius: var(--size-2);
+  text-align: left;
+  padding: 0 var(--size-2);
+}
+
+.menu {
+  width: 100%;
+}
+
+.content {
+  width: 100%;
+}
+
+@media (min-width: 660px) {
+  .layout {
+    flex-direction: row;
+  }
+
+  .menu {
+    width: 35%;
+  }
+
+  .content {
+    width: 75%;
+    border-left: 1px solid var(--green-100);
+    padding: var(--size-2);
+  }
+}

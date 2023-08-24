@@ -1,0 +1,66 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424; */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  /* 900 -> 800 -> 700 -> 600 -> 500 -> 400 -> 300 -> 200 -> 100 -> Green 50
+#1B5E20 #2E7D32 #388E3C #43A047 #4CAF50 #66BB6A #81C784 #A5D6A7 #C8E6C9 #E8F5E9 */
+  --main-green-50: #e8f5e9;
+  --green-100: #c8e6c9;
+  --green-200: #1b5e20;
+  --green-300: #2e7d32;
+  --green-400: #388e3c;
+  --green-500: #43a047;
+  --green-600: #4caf50;
+  --green-700: #66bb6a;
+  --green-800: #81c784;
+  --green-900: #a5d6a7;
+
+  --size-1: 0.25rem;
+  --size-2: 0.5rem;
+  --size-3: 0.75rem;
+  --size-4: 1rem;
+  --size-5: 1.25rem;
+  --size-6: 1.5rem;
+  --size-7: 1.75rem;
+  --size-8: 2rem;
+  --size-9: 2.25rem;
+  --size-10: 2.5rem;
+  --size-11: 2.75rem;
+  --size-12: 3rem;
+  --size-13: 3.25rem;
+  --size-14: 3.5rem;
+  --size-15: 3.75rem;
+  --size-16: 4rem;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  /* place-items: center; */
+  min-width: 320px;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: var(--green-100);
+}
+
+@media (min-width: 660px) {
+  body {
+    background-color: var(--main-green-50);
+  }
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

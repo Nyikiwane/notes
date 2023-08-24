@@ -1,3 +1,3 @@
 # notes taking app
 
-The whole purpose of this note taking app is to practice React.
+A notes taking app solely created for practing React.
