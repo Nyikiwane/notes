@@ -24,6 +24,7 @@
   --green-700: #66bb6a;
   --green-800: #81c784;
   --green-900: #a5d6a7;
+  --black-default: #000;
 
   --size-1: 0.25rem;
   --size-2: 0.5rem;
@@ -46,7 +47,6 @@
 body {
   margin: 0;
   display: flex;
-  /* place-items: center; */
   min-width: 320px;
   min-height: 100vh;
   width: 100vw;
