@@ -5,9 +5,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <Router>
+      <Layout>
       <Routes>
-        <Route path='/' element={<Layout />} />
+        <Route path='/' element={<div>Home</div>} />
       </Routes>
+      </Layout>
     </Router>
   );
 }
