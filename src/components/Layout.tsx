@@ -27,15 +27,16 @@ function Layout() {
   return (
     <div className={styles.layout}>
       <div className={styles.menu}>
-          <ul className={styles['menu-list']}>
-            {notes.map((n) => (
-              <li className={styles['menu-note']} key={n.title}>
-                <a className={styles['menu-note__note']} href='/'>
-                  <span>{n.title}</span>
-                </a>
-              </li>
-            ))}
-          </ul>
+        <ul className={styles['menu-list']}>
+          {notes.map((n) => (
+            <li className={styles['menu-note']} key={n.title}>
+              <a className={styles['menu-note__note']} href='/'>
+                <span>{n.title}</span>
+                <span className={styles['menu-note__body']}>{n.body}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
       <div className={styles.content}>Content</div>
     </div>
