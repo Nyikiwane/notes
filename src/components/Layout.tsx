@@ -13,7 +13,7 @@ function Layout({ children }: Props) {
         <ul className={styles['menu-list']}>
           {Object.entries(notes).map(([slug, { title, body }]) => {
             return (
-              <li className={styles['menu-note']} key={title}>
+              <li className={styles['menu-note']} key={slug}>
                 <Link to={slug} className={styles['menu-note__note']}>
                   <span>{title}</span>
                   <span className={styles['menu-note__body']}>{body}</span>
