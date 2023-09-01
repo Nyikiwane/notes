@@ -38,7 +38,7 @@ function Layout() {
           ))}
         </ul>
       </div>
-      <div className={styles.content}>Content</div>
+      <div className={styles.content}>{notes[0].body}</div>
     </div>
   );
 }
