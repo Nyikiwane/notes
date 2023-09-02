@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom';
+import styles from './Note.module.css'
 import notes from '../lib/notes.json';
 import { makeSlugFromTitle } from '../helpers/helpers';
 
@@ -14,7 +15,10 @@ function Note() {
     );
   }
 
-  return <div>{note[0].body}</div>;
+  return <div>
+    <h1 className={styles.header}>{note[0].title}</h1>
+    {note[0].body}
+    </div>;
 }
 
 export default Note;
