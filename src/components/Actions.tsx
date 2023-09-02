@@ -21,13 +21,13 @@ function Actions() {
         <div className={styles['actions__write--del']}>
           <NoteAddIcon sx={{ pr: 2 }} />
           <EditNoteIcon sx={{ pr: 2 }} />
-          <DeleteOutlineIcon sx={{ pr: 2 }} />
+          <DeleteOutlineIcon />
         </div>
       )}
 
       {pathname === '/' && (
         <div className={styles['actions__format']}>
-          <SaveIcon sx={{ pr: 1 }} />
+          <SaveIcon/>
           <FormatBoldIcon sx={{ pl: 2 }} />
           <FormatItalicIcon sx={{ pl: 2 }} />
           <TitleIcon sx={{ pl: 2 }} />
