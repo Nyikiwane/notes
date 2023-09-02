@@ -7,7 +7,11 @@ function Note() {
   const note = notes.notes.filter((n) => makeSlugFromTitle(n.title) === slug);
 
   if (!note) {
-    return <div>No note this time, please compose yours!!</div>;
+    return (
+      <span style={{ color: 'red' }}>
+        There ain't notes pal, please compose yours!!
+      </span>
+    );
   }
 
   return <div>{note[0].body}</div>;
