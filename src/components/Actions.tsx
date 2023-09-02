@@ -54,7 +54,6 @@ function Actions() {
         className={styles.drawer}
         open={openNotesMenu}
         onClose={closeNotesMenuHandler}
-        sx={{}}
       >
         <div className={styles['notes-list']}>
           <NotesList />
