@@ -1,20 +1,26 @@
 {
   "notes": [
     {
-    "title": "Title 1",
-    "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi accusamus enim, architecto debitis maxime reprehenderit porro natus repellat quam mollitia dignissimos quis magnam neque ullam ab adipisci voluptate deserunt nisi! Veritatis laborum repellat obcaecati, maiores sunt ipsum. Maiores deleniti alias odio autem similique accusamus, libero reiciendis unde aut optio fuga illo, modi laborum fugit quidem. Culpa quos non neque iste1?"
+    "title": "This note is very important",
+    "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi accusamus enim, architecto debitis maxime reprehenderit porro natus repellat quam mollitia dignissimos quis magnam neque ullam ab adipisci voluptate deserunt nisi! Veritatis laborum repellat obcaecati, maiores sunt ipsum. Maiores deleniti alias odio autem similique accusamus, libero reiciendis unde aut optio fuga illo, modi laborum fugit quidem. Culpa quos non neque iste1?",
+    "date": "2023-08-30"
   },
 {
-    "title": "Title 2",
-    "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi accusamus enim, architecto debitis maxime reprehenderit porro natus repellat quam mollitia dignissimos quis magnam neque ullam ab adipisci voluptate deserunt nisi! Veritatis laborum repellat obcaecati, maiores sunt ipsum. Maiores deleniti alias odio autem similique accusamus, libero reiciendis unde aut optio fuga illo, modi laborum fugit quidem. Culpa quos non neque iste2?"
+    "title": "Do you know what happened to lorem?",
+    "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi accusamus enim, architecto debitis maxime reprehenderit porro natus repellat quam mollitia dignissimos quis magnam neque ullam ab adipisci voluptate deserunt nisi! Veritatis laborum repellat obcaecati, maiores sunt ipsum. Maiores deleniti alias odio autem similique accusamus, libero reiciendis unde aut optio fuga illo, modi laborum fugit quidem. Culpa quos non neque iste2?",
+    "date": "2023-08-31"
   },
   {
-    "title": "Title 3",
-    "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi accusamus enim, architecto debitis maxime reprehenderit porro natus repellat quam mollitia dignissimos quis magnam neque ullam ab adipisci voluptate deserunt nisi! Veritatis laborum repellat obcaecati, maiores sunt ipsum. Maiores deleniti alias odio autem similique accusamus, libero reiciendis unde aut optio fuga illo, modi laborum fugit quidem. Culpa quos non neque iste3?"
+    "title": "I should practice JS a bit more",
+    "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi accusamus enim, architecto debitis maxime reprehenderit porro natus repellat quam mollitia dignissimos quis magnam neque ullam ab adipisci voluptate deserunt nisi! Veritatis laborum repellat obcaecati, maiores sunt ipsum. Maiores deleniti alias odio autem similique accusamus, libero reiciendis unde aut optio fuga illo, modi laborum fugit quidem. Culpa quos non neque iste3?",
+    "date": "2023-09-01"
+
   },
    {
-    "title": "Title 4",
-    "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi accusamus enim, architecto debitis maxime reprehenderit porro natus repellat quam mollitia dignissimos quis magnam neque ullam ab adipisci voluptate deserunt nisi! Veritatis laborum repellat obcaecati, maiores sunt ipsum. Maiores deleniti alias odio autem similique accusamus, libero reiciendis unde aut optio fuga illo, modi laborum fugit quidem. Culpa quos non neque iste4?"
+    "title": "You thought you knew JS?",
+    "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi accusamus enim, architecto debitis maxime reprehenderit porro natus repellat quam mollitia dignissimos quis magnam neque ullam ab adipisci voluptate deserunt nisi! Veritatis laborum repellat obcaecati, maiores sunt ipsum. Maiores deleniti alias odio autem similique accusamus, libero reiciendis unde aut optio fuga illo, modi laborum fugit quidem. Culpa quos non neque iste4?",
+    "date": "2023-09-02"
+
   }
 ] 
 }

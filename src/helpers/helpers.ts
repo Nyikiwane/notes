@@ -1,3 +1,3 @@
 export function makeSlugFromTitle(t: string) {
-  return t.toLowerCase().split(' ').join('-');
+  return t.replace(/[?!.]/, '').toLowerCase().split(' ').join('-');
 }

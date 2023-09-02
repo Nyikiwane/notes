@@ -2,11 +2,6 @@ import { useParams } from 'react-router-dom';
 import notes from '../lib/notes.json';
 import { makeSlugFromTitle } from '../helpers/helpers';
 
-interface Note {
-  title: string;
-  body: string;
-}
-
 function Note() {
   const { slug } = useParams();
   const note = notes.notes.filter((n) => makeSlugFromTitle(n.title) === slug);
