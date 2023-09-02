@@ -1,15 +1,15 @@
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styles from './Actions.module.css';
-import FormatBoldIcon from '@mui/icons-material/FormatBold';
-import EditNoteIcon from '@mui/icons-material/EditNote';
-import FormatItalicIcon from '@mui/icons-material/FormatItalic';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
+import Drawer from '@mui/material/Drawer';
+import EditNoteIcon from '@mui/icons-material/EditNote';
+import FormatBoldIcon from '@mui/icons-material/FormatBold';
+import FormatItalicIcon from '@mui/icons-material/FormatItalic';
 import NoteAddIcon from '@mui/icons-material/NoteAdd';
+import NotesIcon from '@mui/icons-material/Notes';
 import SaveIcon from '@mui/icons-material/Save';
 import TitleIcon from '@mui/icons-material/Title';
-import NotesIcon from '@mui/icons-material/Notes';
-import Drawer from '@mui/material/Drawer';
-import { useState } from 'react';
 
 function Actions() {
   const pathname = useLocation().pathname;
