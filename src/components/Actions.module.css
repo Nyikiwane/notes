@@ -5,6 +5,10 @@
   vertical-align: middle;
 }
 
+.actions__new-note {
+    color: inherit;
+}
+
 .actions__format,
 .actions__write--del {
   margin-left: auto;
