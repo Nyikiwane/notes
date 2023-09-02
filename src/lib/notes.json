@@ -1,18 +1,20 @@
 {
-  "note-1": {
+  "notes": [
+    {
     "title": "Title 1",
     "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi accusamus enim, architecto debitis maxime reprehenderit porro natus repellat quam mollitia dignissimos quis magnam neque ullam ab adipisci voluptate deserunt nisi! Veritatis laborum repellat obcaecati, maiores sunt ipsum. Maiores deleniti alias odio autem similique accusamus, libero reiciendis unde aut optio fuga illo, modi laborum fugit quidem. Culpa quos non neque iste1?"
   },
-  "note-2": {
+{
     "title": "Title 2",
     "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi accusamus enim, architecto debitis maxime reprehenderit porro natus repellat quam mollitia dignissimos quis magnam neque ullam ab adipisci voluptate deserunt nisi! Veritatis laborum repellat obcaecati, maiores sunt ipsum. Maiores deleniti alias odio autem similique accusamus, libero reiciendis unde aut optio fuga illo, modi laborum fugit quidem. Culpa quos non neque iste2?"
   },
-  "note-3": {
+  {
     "title": "Title 3",
     "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi accusamus enim, architecto debitis maxime reprehenderit porro natus repellat quam mollitia dignissimos quis magnam neque ullam ab adipisci voluptate deserunt nisi! Veritatis laborum repellat obcaecati, maiores sunt ipsum. Maiores deleniti alias odio autem similique accusamus, libero reiciendis unde aut optio fuga illo, modi laborum fugit quidem. Culpa quos non neque iste3?"
   },
-  "note-4": {
+   {
     "title": "Title 4",
     "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi accusamus enim, architecto debitis maxime reprehenderit porro natus repellat quam mollitia dignissimos quis magnam neque ullam ab adipisci voluptate deserunt nisi! Veritatis laborum repellat obcaecati, maiores sunt ipsum. Maiores deleniti alias odio autem similique accusamus, libero reiciendis unde aut optio fuga illo, modi laborum fugit quidem. Culpa quos non neque iste4?"
   }
+] 
 }
