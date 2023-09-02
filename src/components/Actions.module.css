@@ -1,0 +1,21 @@
+.actions {
+  display: flex;
+  padding: var(--size-1) var(--size-3);
+  border-bottom: 1px solid var(--green-100);
+  vertical-align: middle;
+}
+
+.actions__format,
+.actions__write--del {
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .actions__notes-list {
+    display: none;
+  }
+  .actions__format,
+  .actions__write--del {
+    margin-left: 0;
+  }
+}

@@ -2,6 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import styles from './Layout.module.css';
 import notes from '../lib/notes.json';
 import { useEffect, useState } from 'react';
+import Actions from './Actions';
 
 interface Props {
   children: React.ReactNode;
@@ -37,7 +38,12 @@ function Layout({ children }: Props) {
           })}
         </ul>
       </div>
-      <div className={styles.content}>{children}</div>
+      <div className={styles.content}>
+        <div>
+          <Actions />
+        </div>
+        <div>{children}</div>
+      </div>
     </div>
   );
 }
