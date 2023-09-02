@@ -1,6 +1,7 @@
 .actions {
   display: flex;
   padding: var(--size-1) var(--size-3);
+  margin-bottom: var(--size-2);
   border-bottom: 1px solid var(--green-100);
   vertical-align: middle;
 }

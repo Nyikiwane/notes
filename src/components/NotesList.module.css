@@ -27,6 +27,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-bottom: var(--size-1);
 }
 
 .menu-note__body {
