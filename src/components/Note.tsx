@@ -1,7 +1,6 @@
 import { useParams } from 'react-router-dom';
 import notes from '../lib/notes.json';
 
-
 function Note() {
   const { slug } = useParams();
   const note = notes[slug];
