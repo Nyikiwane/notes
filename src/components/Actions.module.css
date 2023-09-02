@@ -6,7 +6,7 @@
 }
 
 .actions__new-note {
-    color: inherit;
+  color: inherit;
 }
 
 .actions__format,
@@ -14,7 +14,7 @@
   margin-left: auto;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 660px) {
   .actions__notes-list {
     display: none;
   }
@@ -22,4 +22,18 @@
   .actions__write--del {
     margin-left: 0;
   }
+
+  .drawer {
+    display: none;
+  }
+}
+
+.notes-list {
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  background-color: var(--main-green-50);
+  height: 100%;
+  padding: var(--size-3);
+  margin: 0 auto;
 }

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styles from './Actions.module.css';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
@@ -10,6 +10,7 @@ import NoteAddIcon from '@mui/icons-material/NoteAdd';
 import NotesIcon from '@mui/icons-material/Notes';
 import SaveIcon from '@mui/icons-material/Save';
 import TitleIcon from '@mui/icons-material/Title';
+import NotesList from './NotesList';
 
 function Actions() {
   const pathname = useLocation().pathname;
@@ -17,6 +18,9 @@ function Actions() {
 
   const openNotesMenuHandler = () => setOpenNotesMenu(true);
   const closeNotesMenuHandler = () => setOpenNotesMenu(false);
+  useEffect(() => {
+    setOpenNotesMenu(false);
+  }, [pathname]);
 
   return (
     <>
@@ -47,11 +51,14 @@ function Actions() {
         )}
       </div>
       <Drawer
-        sx={{ width: '50%' }}
+        className={styles.drawer}
         open={openNotesMenu}
         onClose={closeNotesMenuHandler}
+        sx={{}}
       >
-        <div> this noteeeeeeee</div>
+        <div className={styles['notes-list']}>
+          <NotesList />
+        </div>
       </Drawer>
     </>
   );

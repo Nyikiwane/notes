@@ -1,0 +1,30 @@
+.menu-list {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.menu-note {
+  padding: var(--size-2);
+  border-radius: var(--size-1);
+  margin-bottom: var(--size-2);
+  max-width: 100%;
+}
+
+.menu-note__active--note {
+  background-color: var(--green-100);
+}
+
+.menu-note__note {
+  color: var(--black-default);
+  text-decoration: none;
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-note__body {
+  color: var(--black-500);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

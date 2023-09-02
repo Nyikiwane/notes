@@ -7,7 +7,7 @@
   border-radius: var(--size-2);
 }
 
-.menu {
+.notes-list {
   display: none;
 }
 
@@ -23,43 +23,13 @@
     padding: 0 var(--size-3);
   }
 
-  .menu {
+  .notes-list {
     display: flex;
     flex-direction: column;
     width: 25%;
     padding-right: var(--size-3);
     padding-top: var(--size-3);
     margin: 0 auto;
-  }
-
-  .menu-list {
-    margin: 0 auto;
-    width: 100%;
-  }
-  .menu-note {
-    padding: var(--size-2);
-    border-radius: var(--size-1);
-    margin-bottom: var(--size-2);
-    max-width: 100%;
-  }
-  
-  .menu-note__active--note {
-    background-color: var(--green-100);
-  }
-
-  .menu-note__note {
-    color: var(--black-default);
-    text-decoration: none;
-    width: inherit;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .menu-note__body {
-    color: var(--black-500);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 
   .content {
