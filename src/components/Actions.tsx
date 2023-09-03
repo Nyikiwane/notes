@@ -52,10 +52,14 @@ function Actions() {
         </div>
         {pathname !== '/' && (
           <div className={styles['actions__write--del']}>
-            <Link to='/' className={styles['actions__new-note']}>
+            <Link to='/'>
               <NoteAddIcon sx={{ pr: 2 }} />
             </Link>
-            <EditNoteIcon sx={{ pr: 2 }} />
+            <Link
+              to={!pathname.startsWith('/edit') ? `/edit${pathname}` : pathname}
+            >
+              <EditNoteIcon sx={{ pr: 2 }} />
+            </Link>
             <DeleteOutlineIcon
               onClick={deleteNoteHandler}
               sx={{ cursor: 'pointer' }}
