@@ -1,19 +1,18 @@
+import { useState } from 'react';
 import './CreateNote.module.css';
-import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
-import { ChangeEvent, useState } from 'react';
+import { Event } from '../vite-env';
 import notes from '../lib/notes.json';
-
-type E = ChangeEvent<HTMLInputElement>;
+import TextField from '@mui/material/TextField';
 
 function CreateNote() {
   const [note, setNote] = useState('');
 
-  const onChangeHandler = (e: E) => {
+  const onChangeHandler = (e: Event) => {
     setNote(e.target.value);
   };
 
-  const onSubmitHandler = (e: E) => {
+  const onSubmitHandler = (e: Event) => {
     e.preventDefault();
 
     const text = note.split('\n');
