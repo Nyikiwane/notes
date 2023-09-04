@@ -25,8 +25,12 @@ function EditNote() {
     setNote(e.target.value);
   };
 
-  const onSubmitHandler = (e: Event) => {
+  const onSubmitHandler = (e: Event | React.MouseEvent) => {
     e.preventDefault();
+
+    if (note.length === 0) {
+      return;
+    }
 
     const textArray = note.split('\n');
     const title = textArray[0]; // it will always match the first line, even if there is no a 'new line'
@@ -48,9 +52,9 @@ function EditNote() {
   };
 
   return (
-    <Box component='form' onSubmit={onSubmitHandler}>
+    <Box component='form'>
       <Actions
-        saveType='submit'
+        onSave={onSubmitHandler}
         onBold={() => console.log('bold')}
         onItalic={() => console.log('bold')}
         onHeading={() => console.log('bold')}

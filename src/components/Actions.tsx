@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import styles from './Actions.module.css';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
@@ -17,7 +17,7 @@ import { makeSlugFromTitle } from '../helpers/helpers';
 type F = () => void;
 
 interface Props {
-  saveType: 'submit';
+  onSave: (event: React.MouseEvent<SVGSVGElement, MouseEvent>) => void;
   onBold: F;
   onItalic: F;
   onHeading: F;
@@ -25,11 +25,12 @@ interface Props {
 
 function Actions(props: Props) {
   const pathname = useLocation().pathname;
+  const { onSave, onBold, onHeading, onItalic } = props;
   const [openNotesMenu, setOpenNotesMenu] = useState(false);
   const navigate = useNavigate();
-  const { saveType, onBold, onHeading, onItalic } = props;
   const openNotesMenuHandler = () => setOpenNotesMenu(true);
   const closeNotesMenuHandler = () => setOpenNotesMenu(false);
+
   useEffect(() => {
     setOpenNotesMenu(false);
   }, [pathname]);
@@ -78,9 +79,7 @@ function Actions(props: Props) {
 
         {pathname.startsWith('/edit') || pathname === '/' ? (
           <div className={styles['actions__format']}>
-            <button className={styles['actions__save-btn']} type={saveType}>
-              <SaveIcon sx={{ cursor: 'pointer' }} />
-            </button>
+            <SaveIcon sx={{ cursor: 'pointer' }} onClick={onSave} />
             <FormatBoldIcon
               sx={{ pl: 2, cursor: 'pointer' }}
               onClick={onBold}

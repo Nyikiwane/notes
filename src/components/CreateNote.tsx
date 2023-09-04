@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import './CreateNote.module.css';
 import Box from '@mui/material/Box';
 import { Event } from '../vite-env';
@@ -16,7 +16,7 @@ function CreateNote() {
     setNote(e.target.value);
   };
 
-  const onSubmitHandler = (e: Event) => {
+  const onSubmitHandler = (e: Event | React.MouseEvent) => {
     e.preventDefault();
 
     const text = note.split('\n');
@@ -28,9 +28,9 @@ function CreateNote() {
   };
 
   return (
-    <Box component='form' onSubmit={onSubmitHandler}>
+    <Box component='form'>
       <Actions
-        saveType='submit'
+        onSave={onSubmitHandler}
         onBold={() => console.log('bold')}
         onItalic={() => console.log('bold')}
         onHeading={() => console.log('bold')}
