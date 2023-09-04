@@ -5,9 +5,12 @@ import { Event } from '../vite-env';
 import notes from '../lib/notes.json';
 import TextField from '@mui/material/TextField';
 import Actions from './Actions';
+import { useNavigate } from 'react-router-dom';
+import { makeSlugFromTitle } from '../helpers/helpers';
 
 function CreateNote() {
   const [note, setNote] = useState('');
+  const navigation = useNavigate();
 
   const onChangeHandler = (e: Event) => {
     setNote(e.target.value);
@@ -21,11 +24,17 @@ function CreateNote() {
     const body = text.filter((_, i) => i !== 0).join('\n');
     const date = new Date().toISOString();
     notes.notes.push({ title, body, date });
+    navigation(`/${makeSlugFromTitle(title)}`);
   };
 
   return (
     <Box component='form' onSubmit={onSubmitHandler}>
-      <Actions />
+      <Actions
+        saveType='submit'
+        onBold={() => console.log('bold')}
+        onItalic={() => console.log('bold')}
+        onHeading={() => console.log('bold')}
+      />
       <TextField
         multiline
         fullWidth
@@ -37,7 +46,6 @@ function CreateNote() {
           },
         }}
       />
-      <button type='submit'>submit</button>
     </Box>
   );
 }

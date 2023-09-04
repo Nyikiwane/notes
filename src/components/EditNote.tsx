@@ -49,7 +49,12 @@ function EditNote() {
 
   return (
     <Box component='form' onSubmit={onSubmitHandler}>
-      <Actions />
+      <Actions
+        saveType='submit'
+        onBold={() => console.log('bold')}
+        onItalic={() => console.log('bold')}
+        onHeading={() => console.log('bold')}
+      />
       <TextField
         multiline
         fullWidth
@@ -62,7 +67,6 @@ function EditNote() {
         }}
         value={note}
       />
-      <button type='submit'>submit</button>
     </Box>
   );
 }

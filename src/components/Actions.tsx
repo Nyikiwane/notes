@@ -14,11 +14,20 @@ import NotesList from './NotesList';
 import notes from '../lib/notes.json';
 import { makeSlugFromTitle } from '../helpers/helpers';
 
-function Actions() {
+type F = () => void;
+
+interface Props {
+  saveType: 'submit';
+  onBold: F;
+  onItalic: F;
+  onHeading: F;
+}
+
+function Actions(props: Props) {
   const pathname = useLocation().pathname;
   const [openNotesMenu, setOpenNotesMenu] = useState(false);
   const navigate = useNavigate();
-
+  const { saveType, onBold, onHeading, onItalic } = props;
   const openNotesMenuHandler = () => setOpenNotesMenu(true);
   const closeNotesMenuHandler = () => setOpenNotesMenu(false);
   useEffect(() => {
@@ -69,10 +78,18 @@ function Actions() {
 
         {pathname.startsWith('/edit') || pathname === '/' ? (
           <div className={styles['actions__format']}>
-            <SaveIcon />
-            <FormatBoldIcon sx={{ pl: 2 }} />
-            <FormatItalicIcon sx={{ pl: 2 }} />
-            <TitleIcon sx={{ pl: 2 }} />
+            <button className={styles['actions__save-btn']} type={saveType}>
+              <SaveIcon sx={{ cursor: 'pointer' }} />
+            </button>
+            <FormatBoldIcon
+              sx={{ pl: 2, cursor: 'pointer' }}
+              onClick={onBold}
+            />
+            <FormatItalicIcon
+              sx={{ pl: 2, cursor: 'pointer' }}
+              onClick={onItalic}
+            />
+            <TitleIcon sx={{ pl: 2, cursor: 'pointer' }} onClick={onHeading} />
           </div>
         ) : null}
       </div>

@@ -15,6 +15,13 @@ a {
   margin-left: auto;
 }
 
+.actions__save-btn {
+  background-color: inherit;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
 @media (min-width: 660px) {
   .actions__notes-list {
     display: none;
