@@ -1,19 +1,19 @@
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import styles from './Note.module.css';
 import notes from '../lib/notes.json';
 import { makeSlugFromTitle } from '../helpers/helpers';
+import { useEffect } from 'react';
 
 function Note() {
   const { slug } = useParams();
   const note = notes.notes.filter((n) => makeSlugFromTitle(n.title) === slug);
+  const navigate = useNavigate();
 
-  if (note.length === 0) {
-    return (
-      <span style={{ color: 'red' }}>
-        There ain't notes pal, please compose yours!!
-      </span>
-    );
-  }
+  useEffect(() => {
+    if (note.length === 0) {
+      navigate('/');
+    }
+  })
 
   return (
     note && (
