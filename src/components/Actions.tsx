@@ -50,7 +50,7 @@ function Actions() {
         >
           <NotesIcon />
         </div>
-        {pathname !== '/' && (
+        {pathname !== '/' && !pathname.startsWith('/edit') && (
           <div className={styles['actions__write--del']}>
             <Link to='/'>
               <NoteAddIcon sx={{ pr: 2 }} />
@@ -67,14 +67,14 @@ function Actions() {
           </div>
         )}
 
-        {pathname === '/' && (
+        {pathname.startsWith('/edit') || pathname === '/' ? (
           <div className={styles['actions__format']}>
             <SaveIcon />
             <FormatBoldIcon sx={{ pl: 2 }} />
             <FormatItalicIcon sx={{ pl: 2 }} />
             <TitleIcon sx={{ pl: 2 }} />
           </div>
-        )}
+        ) : null}
       </div>
       <Drawer
         className={styles.drawer}
