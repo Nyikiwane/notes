@@ -6,7 +6,7 @@ import { makeSlugFromTitle } from '../helpers/helpers';
 
 function NotesList() {
   const [path, setPath] = useState('/');
-  const pathname = useLocation().pathname; 
+  const pathname = useLocation().pathname;
   useEffect(() => {
     if (pathname !== '/') {
       setPath(pathname.slice(1)); // to strip the '/'

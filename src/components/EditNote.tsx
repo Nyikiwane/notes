@@ -6,6 +6,7 @@ import { makeSlugFromTitle } from '../helpers/helpers';
 import notes from '../lib/notes.json';
 import TextField from '@mui/material/TextField';
 import { Event } from '../vite-env';
+import Actions from './Actions';
 
 function EditNote() {
   const slug = useParams().slug;
@@ -48,6 +49,7 @@ function EditNote() {
 
   return (
     <Box component='form' onSubmit={onSubmitHandler}>
+      <Actions />
       <TextField
         multiline
         fullWidth

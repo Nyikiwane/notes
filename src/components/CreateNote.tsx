@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import { Event } from '../vite-env';
 import notes from '../lib/notes.json';
 import TextField from '@mui/material/TextField';
+import Actions from './Actions';
 
 function CreateNote() {
   const [note, setNote] = useState('');
@@ -24,6 +25,7 @@ function CreateNote() {
 
   return (
     <Box component='form' onSubmit={onSubmitHandler}>
+      <Actions />
       <TextField
         multiline
         fullWidth
