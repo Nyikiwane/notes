@@ -3,9 +3,11 @@ h1 {
   padding: 0;
 }
 
-::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
-  font-weight: bold !important;
-  font-size: 1.5rem;
-  margin: 0;
+.textarea {
+  width: 100%;
+  height: 80vh;
+  font-family: inherit;
+  background-color: aliceblue;
+  outline: none;
+  padding: var(--size-2);
 }
