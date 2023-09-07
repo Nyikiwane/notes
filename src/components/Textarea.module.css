@@ -1,0 +1,8 @@
+.textarea {
+  display: block;
+  width: inherit;
+  height: 80vh;
+  font-family: inherit;
+  outline: none;
+  padding: 0 var(--size-2);
+}

@@ -1,23 +1,26 @@
 import React, { useState } from 'react';
 import styles from './CreateNote.module.css';
-import Box from '@mui/material/Box';
 import { Event } from '../vite-env';
 import notes from '../lib/notes.json';
 import Actions from './Actions';
 import { useNavigate } from 'react-router-dom';
 import { makeSlugFromTitle } from '../helpers/helpers';
+import Textarea from './Textarea';
 
 function CreateNote() {
   const [note, setNote] = useState('');
   const [selectedText, setSlectedText] = useState('');
   const navigation = useNavigate();
 
-  const onChangeHandler = (e: React.FormEvent<HTMLDivElement>) => {
+  const onChangeHandler = (e: React.FormEvent<HTMLSpanElement>) => {
     setNote(e.currentTarget.textContent as string);
   };
 
   const onSubmitHandler = (e: Event | React.MouseEvent) => {
     e.preventDefault();
+    if (note.length === 0) {
+      return;
+    }
 
     const text = note.split('\n');
     const title = text[0]; // it will always match the first line, even if there is no a 'new line'
@@ -56,21 +59,15 @@ function CreateNote() {
   };
 
   return (
-    <Box component='form'>
+    <div className={styles.container}>
       <Actions
         onSave={onSubmitHandler}
         onBold={boldTextHandler}
         onItalic={italicizeTextHandler}
         onHeading={headerTextHandler}
       />
-      <div
-        className={styles.textarea}
-        contentEditable
-        dangerouslySetInnerHTML={{ __html: `${note ?? ''}` }}
-        onSelect={selectTextHandler}
-        onInput={onChangeHandler}
-      />
-    </Box>
+      <Textarea onIput={onChangeHandler} onSelect={selectTextHandler} />
+    </div>
   );
 }
 
