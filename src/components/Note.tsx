@@ -13,13 +13,16 @@ function Note() {
     if (note.length === 0) {
       navigate('/');
     }
-  })
+  });
 
   return (
     note && (
       <div>
-        <h1 className={styles.header}>{note[0]?.title}</h1>
-        {note[0]?.body}
+        <h1
+          className={styles.header}
+          dangerouslySetInnerHTML={{ __html: note[0]?.title }}
+        />
+        <div dangerouslySetInnerHTML={{ __html: note[0]?.body }} />
       </div>
     )
   );

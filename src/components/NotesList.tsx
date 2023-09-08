@@ -27,8 +27,14 @@ function NotesList() {
               key={slug}
             >
               <Link to={`/${slug}`} className={styles['menu-note__note']}>
-                <span className={styles['menu-note__title']}>{note.title}</span>
-                <span className={styles['menu-note__body']}>{note.body}</span>
+                <span
+                  className={styles['menu-note__title']}
+                  dangerouslySetInnerHTML={{ __html: note.title }}
+                />
+                <span
+                  className={styles['menu-note__body']}
+                  dangerouslySetInnerHTML={{ __html: note.body }}
+                />
               </Link>
             </li>
           );
