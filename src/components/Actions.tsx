@@ -17,10 +17,10 @@ import { makeSlugFromTitle } from '../helpers/helpers';
 type F = () => void;
 
 interface Props {
-  onSave: (event: React.MouseEvent<SVGSVGElement, MouseEvent>) => void;
-  onBold: F;
-  onItalic: F;
-  onHeading: F;
+  onSave?: (event: React.MouseEvent<SVGSVGElement, MouseEvent>) => void;
+  onBold?: F;
+  onItalic?: F;
+  onHeading?: F;
 }
 
 function Actions(props: Props) {
