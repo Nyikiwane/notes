@@ -12,7 +12,7 @@ function EditNote() {
   const slug = useParams().slug;
   const navigate = useNavigate();
 
-  const [note, setNote] = useState('');
+  const [content, setNote] = useState('');
 
   useEffect(() => {
     const noteContent = notes.notes.filter(
@@ -21,18 +21,18 @@ function EditNote() {
     setNote(`${noteContent.title}\n${noteContent?.body}`);
   }, [slug]);
 
-  const onChangeHandler = (e: Event) => {
+  const handleContentChange = (e: Event) => {
     setNote(e.target.value);
   };
 
-  const onSubmitHandler = (e: Event | React.MouseEvent) => {
+  const handleSubmit = (e: Event | React.MouseEvent) => {
     e.preventDefault();
 
-    if (note.length === 0) {
+    if (content.length === 0) {
       return;
     }
 
-    const textArray = note.split('\n');
+    const textArray = content.split('\n');
     const title = textArray[0]; // it will always match the first line, even if there is no a 'new line'
     const titleSlug = makeSlugFromTitle(title);
     const body = textArray.filter((_, i) => i !== 0).join('\n');
@@ -54,7 +54,7 @@ function EditNote() {
   return (
     <Box component='form'>
       <Actions
-        onSave={onSubmitHandler}
+        onSave={handleSubmit}
         onBold={() => console.log('bold')}
         onItalic={() => console.log('bold')}
         onHeading={() => console.log('bold')}
@@ -63,13 +63,13 @@ function EditNote() {
         multiline
         fullWidth
         placeholder='New note'
-        onChange={onChangeHandler}
+        onChange={handleContentChange}
         sx={{
           '& fieldset': {
             border: 'none',
           },
         }}
-        value={note}
+        value={content}
       />
     </Box>
   );

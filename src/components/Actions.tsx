@@ -28,14 +28,14 @@ function Actions(props: Props) {
   const { onSave, onBold, onHeading, onItalic } = props;
   const [openNotesMenu, setOpenNotesMenu] = useState(false);
   const navigate = useNavigate();
-  const openNotesMenuHandler = () => setOpenNotesMenu(true);
-  const closeNotesMenuHandler = () => setOpenNotesMenu(false);
+  const handleOpenNotesMenu = () => setOpenNotesMenu(true);
+  const handleCloseNotesMenu = () => setOpenNotesMenu(false);
 
   useEffect(() => {
     setOpenNotesMenu(false);
   }, [pathname]);
 
-  const deleteNoteHandler = () => {
+  const handleDeleteNote = () => {
     for (let i = 0; i < notes.notes.length; i++) {
       if (makeSlugFromTitle(notes.notes[i].title) === pathname.slice(1)) {
         notes.notes.splice(i, 1);
@@ -56,7 +56,7 @@ function Actions(props: Props) {
       <div className={styles.actions}>
         <div
           className={styles['actions__notes-list']}
-          onClick={openNotesMenuHandler}
+          onClick={handleOpenNotesMenu}
         >
           <NotesIcon />
         </div>
@@ -71,7 +71,7 @@ function Actions(props: Props) {
               <EditNoteIcon sx={{ pr: 2 }} />
             </Link>
             <DeleteOutlineIcon
-              onClick={deleteNoteHandler}
+              onClick={handleDeleteNote}
               sx={{ cursor: 'pointer' }}
             />
           </div>
@@ -95,7 +95,7 @@ function Actions(props: Props) {
       <Drawer
         className={styles.drawer}
         open={openNotesMenu}
-        onClose={closeNotesMenuHandler}
+        onClose={handleCloseNotesMenu}
       >
         <div className={styles['notes-list']}>
           <NotesList />
