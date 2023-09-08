@@ -12,11 +12,11 @@ function CreateNote() {
   const [selectedText, setSlectedText] = useState('');
   const navigation = useNavigate();
 
-  const onChangeHandler = (e: React.FormEvent<HTMLSpanElement>) => {
+  const handleContentChange = (e: React.FormEvent<HTMLDivElement>) => {
     setNote(e.currentTarget.textContent as string);
   };
 
-  const onSubmitHandler = (e: Event | React.MouseEvent) => {
+  const handleSubmit = (e: Event | React.MouseEvent) => {
     e.preventDefault();
     if (note.length === 0) {
       return;
@@ -30,28 +30,28 @@ function CreateNote() {
     navigation(`/${makeSlugFromTitle(title)}`);
   };
 
-  const selectTextHandler = () => {
+  const handleTextSelection = () => {
     const t = window.getSelection()?.toString();
     if (t) {
       setSlectedText(t);
     }
   };
 
-  const boldTextHandler = () => {
+  const handleTextBold = () => {
     if (selectedText !== '' && note.includes(selectedText)) {
       const boldT = `<b>${selectedText}</b>`;
       setNote(note.replace(selectedText, boldT));
     }
   };
 
-  const italicizeTextHandler = () => {
+  const handleTextItalic = () => {
     if (selectedText !== '' && note.includes(selectedText)) {
       const italicT = `<i>${selectedText}</i>`;
       setNote(note.replace(selectedText, italicT));
     }
   };
 
-  const headerTextHandler = () => {
+  const handleTextHeader = () => {
     if (selectedText !== '' && note.includes(selectedText)) {
       const headerT = `<h1>${selectedText}</h1>`;
       setNote(note.replace(selectedText, headerT));
@@ -61,12 +61,16 @@ function CreateNote() {
   return (
     <div className={styles.container}>
       <Actions
-        onSave={onSubmitHandler}
-        onBold={boldTextHandler}
-        onItalic={italicizeTextHandler}
-        onHeading={headerTextHandler}
+        onSave={handleSubmit}
+        onBold={handleTextBold}
+        onItalic={handleTextItalic}
+        onHeading={handleTextHeader}
       />
-      <Textarea onIput={onChangeHandler} onSelect={selectTextHandler} />
+      <Textarea
+        content={note}
+        onIput={handleContentChange}
+        onSelect={handleTextSelection}
+      />
     </div>
   );
 }

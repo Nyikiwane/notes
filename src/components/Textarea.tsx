@@ -3,16 +3,23 @@ import styles from './Textarea.module.css';
 interface Props {
   onIput: React.ReactEventHandler<HTMLSpanElement>;
   onSelect: React.ReactEventHandler<HTMLSpanElement>;
+  content: string;
 }
 
-function Textarea({ onIput, onSelect }: Props) {
+function Textarea({ onIput, onSelect, content }: Props) {
   return (
-    <span
-      contentEditable={true}
-      className={styles.textarea}
-      onInput={onIput}
-      onSelect={onSelect}
-    />
+    <>
+      <div
+        dangerouslySetInnerHTML={{ __html: content }}
+        className={styles.content}
+      />
+      <div
+        contentEditable
+        onInput={onIput}
+        onSelect={onSelect}
+        className={styles.textarea}
+      />
+    </>
   );
 }
 

@@ -1,8 +1,16 @@
+.content {
+  position: absolute;
+  min-height: 80vh;
+  width: 100%;
+}
+
 .textarea {
-  display: block;
-  width: inherit;
-  height: 80vh;
-  font-family: inherit;
+  position: absolute;
+  min-height: 80vh;
+  width: 100%;
   outline: none;
-  padding: 0 var(--size-2);
+  background-color: transparent;
+  color: transparent;
+  caret-color: var(--black-default);
+  caret-shape: block;
 }
