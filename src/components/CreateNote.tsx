@@ -8,21 +8,21 @@ import { makeSlugFromTitle } from '../helpers/helpers';
 import Textarea from './Textarea';
 
 function CreateNote() {
-  const [note, setNote] = useState('');
+  const [content, setContent] = useState('');
   const [selectedText, setSlectedText] = useState('');
   const navigation = useNavigate();
 
   const handleContentChange = (e: React.FormEvent<HTMLDivElement>) => {
-    setNote(e.currentTarget.textContent as string);
+    setContent(e.currentTarget.innerHTML);
   };
 
   const handleSubmit = (e: Event | React.MouseEvent) => {
     e.preventDefault();
-    if (note.length === 0) {
+    if (content.length === 0) {
       return;
     }
 
-    const text = note.split('\n');
+    const text = content.split('\n');
     const title = text[0]; // it will always match the first line, even if there is no a 'new line'
     const body = text.filter((_, i) => i !== 0).join('\n');
     const date = new Date().toISOString();
@@ -38,23 +38,23 @@ function CreateNote() {
   };
 
   const handleTextBold = () => {
-    if (selectedText !== '' && note.includes(selectedText)) {
+    if (selectedText !== '' && content.includes(selectedText)) {
       const boldT = `<b>${selectedText}</b>`;
-      setNote(note.replace(selectedText, boldT));
+      setContent(content.replace(selectedText, boldT));
     }
   };
 
   const handleTextItalic = () => {
-    if (selectedText !== '' && note.includes(selectedText)) {
+    if (selectedText !== '' && content.includes(selectedText)) {
       const italicT = `<i>${selectedText}</i>`;
-      setNote(note.replace(selectedText, italicT));
+      setContent(content.replace(selectedText, italicT));
     }
   };
 
   const handleTextHeader = () => {
-    if (selectedText !== '' && note.includes(selectedText)) {
+    if (selectedText !== '' && content.includes(selectedText)) {
       const headerT = `<h1>${selectedText}</h1>`;
-      setNote(note.replace(selectedText, headerT));
+      setContent(content.replace(selectedText, headerT));
     }
   };
 
@@ -67,7 +67,7 @@ function CreateNote() {
         onHeading={handleTextHeader}
       />
       <Textarea
-        content={note}
+        content={content}
         onIput={handleContentChange}
         onSelect={handleTextSelection}
       />
