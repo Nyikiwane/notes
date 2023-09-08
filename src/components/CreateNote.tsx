@@ -38,21 +38,21 @@ function CreateNote() {
   };
 
   const boldTextHandler = () => {
-    if (selectedText && note.includes(selectedText)) {
+    if (selectedText !== '' && note.includes(selectedText)) {
       const boldT = `<b>${selectedText}</b>`;
       setNote(note.replace(selectedText, boldT));
     }
   };
 
   const italicizeTextHandler = () => {
-    if (selectedText && note.includes(selectedText)) {
+    if (selectedText !== '' && note.includes(selectedText)) {
       const italicT = `<i>${selectedText}</i>`;
       setNote(note.replace(selectedText, italicT));
     }
   };
 
   const headerTextHandler = () => {
-    if (selectedText && note.includes(selectedText)) {
+    if (selectedText !== '' && note.includes(selectedText)) {
       const headerT = `<h1>${selectedText}</h1>`;
       setNote(note.replace(selectedText, headerT));
     }
