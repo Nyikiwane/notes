@@ -9,7 +9,6 @@ import FormatItalicIcon from '@mui/icons-material/FormatItalic';
 import NoteAddIcon from '@mui/icons-material/NoteAdd';
 import NotesIcon from '@mui/icons-material/Notes';
 import SaveIcon from '@mui/icons-material/Save';
-import TitleIcon from '@mui/icons-material/Title';
 import NotesList from './NotesList';
 import notes from '../lib/notes.json';
 import { makeSlugFromTitle } from '../helpers/helpers';
@@ -20,12 +19,11 @@ interface Props {
   onSave?: (event: React.MouseEvent<SVGSVGElement, MouseEvent>) => void;
   onBold?: F;
   onItalic?: F;
-  onHeading?: F;
 }
 
 function Actions(props: Props) {
   const pathname = useLocation().pathname;
-  const { onSave, onBold, onHeading, onItalic } = props;
+  const { onSave, onBold, onItalic } = props;
   const [openNotesMenu, setOpenNotesMenu] = useState(false);
   const navigate = useNavigate();
   const handleOpenNotesMenu = () => setOpenNotesMenu(true);
@@ -88,7 +86,6 @@ function Actions(props: Props) {
               sx={{ pl: 2, cursor: 'pointer' }}
               onClick={onItalic}
             />
-            <TitleIcon sx={{ pl: 2, cursor: 'pointer' }} onClick={onHeading} />
           </div>
         ) : null}
       </div>

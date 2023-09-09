@@ -60,20 +60,12 @@ function CreateNote() {
     }
   };
 
-  const handleTextHeader = () => {
-    if (selectedText !== '' && content.includes(selectedText)) {
-      const headerT = `<h1>${selectedText}</h1>`;
-      setContent(content.replace(selectedText, headerT));
-    }
-  };
-
   return (
     <div className={styles.container}>
       <Actions
         onSave={handleSubmit}
         onBold={handleTextBold}
         onItalic={handleTextItalic}
-        onHeading={handleTextHeader}
       />
       <Textarea
         content={content}

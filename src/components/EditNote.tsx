@@ -57,7 +57,6 @@ function EditNote() {
         onSave={handleSubmit}
         onBold={() => console.log('bold')}
         onItalic={() => console.log('bold')}
-        onHeading={() => console.log('bold')}
       />
       <TextField
         multiline
