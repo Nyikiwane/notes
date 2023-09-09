@@ -38,6 +38,10 @@ function CreateNote() {
   };
 
   const handleTextBold = () => {
+    if (content.includes(`<b>${selectedText}</b>`)) {
+      setContent(content.replace(`<b>${selectedText}</b>`, selectedText));
+      return;
+    }
     if (selectedText !== '' && content.includes(selectedText)) {
       const boldT = `<b>${selectedText}</b>`;
       setContent(content.replace(selectedText, boldT));
@@ -45,6 +49,11 @@ function CreateNote() {
   };
 
   const handleTextItalic = () => {
+     if (content.includes(`<i>${selectedText}</i>`)) {
+       setContent(content.replace(`<i>${selectedText}</i>`, selectedText));
+       return;
+     }
+
     if (selectedText !== '' && content.includes(selectedText)) {
       const italicT = `<i>${selectedText}</i>`;
       setContent(content.replace(selectedText, italicT));
